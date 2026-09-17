@@ -22,6 +22,7 @@ public class RecommendationJob {
 
     private LocalDateTime createdAt = LocalDateTime.now();
     private LocalDateTime finishedAt;
+    private String errorMessage;
 
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
@@ -49,4 +50,7 @@ public class RecommendationJob {
 
     public LocalDateTime getFinishedAt() { return finishedAt; }
     public void setFinishedAt(LocalDateTime finishedAt) { this.finishedAt = finishedAt; }
+
+    public String getErrorMessage() { return errorMessage; }
+    public void setErrorMessage(String errorMessage) { this.errorMessage = errorMessage; }
 }
