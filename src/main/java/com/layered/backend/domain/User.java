@@ -26,4 +26,20 @@ public class User {
 
     public LocalDateTime getCreatedAt() { return createdAt; }
     public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
+
+    @Column(unique = true)
+    private String firebaseUid;
+
+
+    public User() {}
+
+    public User(String firebaseUid, String email) {
+        this.firebaseUid = firebaseUid;
+        this.email = email;
+    }
+
+    public String getFirebaseUid() { return firebaseUid; }
+    public void setFirebaseUid(String firebaseUid) { this.firebaseUid = firebaseUid; }
+
+
 }
